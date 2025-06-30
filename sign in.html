@@ -1,51 +1,106 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .login-box {
-            width: 300px;
-            margin: 40px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 380px;
         }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
         .login-input {
             width: 100%;
-            height: 40px;
+            padding: 12px 15px;
             margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            font-size: 16px;
         }
+
+        .login-input:focus {
+            border-color: #66a6ff;
+            outline: none;
+        }
+
         .login-button {
             width: 100%;
-            height: 40px;
-            margin-top: 20px;
-            padding: 10px;
+            padding: 12px;
+            background: linear-gradient(to right, #00b09b, #96c93d);
             border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: #fff;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background 0.3s;
         }
+
         .login-button:hover {
-            background-color: #3e8e41;
+            background: linear-gradient(to right, #008b7a, #76a92d);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4e8df5;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
+    <div class="login-container">
+        <h2>Sign In</h2>
         <form>
-            <input type="text" class="login-input" placeholder="Username">
-            <input type="password" class="login-input" placeholder="Password">
+            <input type="text" class="login-input" placeholder="Username" required>
+            <input type="password" class="login-input" placeholder="Password" required>
             <input type="submit" class="login-button" value="Login">
         </form>
+        <div class="footer">
+            Don't have an account? <a href="#">Register</a>
+        </div>
     </div>
 </body>
 </html>
