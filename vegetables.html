@@ -4,86 +4,91 @@
     <meta charset="UTF-8">
     <title>VeggieMart</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0ffe0, #f0fff0);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            margin-bottom: 20px;
+        }
+
         .veg-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1200px;
         }
+
         .veg-item {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
+            margin: 15px;
+            padding: 15px;
+            background-color: white;
             border-radius: 10px;
             width: 200px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
         }
+
+        .veg-item:hover {
+            transform: scale(1.03);
+        }
+
         .veg-image {
             width: 100%;
             height: 150px;
             object-fit: cover;
+            border-radius: 8px;
         }
+
         .add-to-cart {
             background-color: #4CAF50;
             color: white;
-            padding: 10px;
+            padding: 8px 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Vegetable Mart</h1>
+    <h1>VeggieMart - Fresh Vegetables</h1>
     <ul class="veg-list">
-        <li class="veg-item">
-            <img src="tomato.jpeg" alt="Tomato" class="veg-image">
-            <p>₹20/kg</p>
-            <b>Tomato</b><br>
-            <button class="add-to-cart" onclick="addToCart('Tomato', 20, 'tomato.jpeg')">Add to Cart</button>
-        </li>
-<li class="veg-item">
-            <img src="cucumber.jpeg" alt="Cucumber" class="veg-image">
-            <p>₹15/kg</p>
-            <b>Cucumber</b><br>
-            <button class="add-to-cart" onclick="addToCart('Cucumber', 15, 'cucumber.jpeg')">Add to Cart</button>
-        </li>
-
-        <li class="veg-item">
-            <img src="carrot.jpeg" alt="Carrot" class="veg-image">
-            <p>₹25/kg</p>
-            <b>Carrot</b><br>
-            <button class="add-to-cart" onclick="addToCart('Carrot', 25, 'carrot.jpeg')">Add to Cart</button>
-        </li>
-<li class="veg-item">
-            <img src="beetroot.jpeg" alt="beetroot" class="veg-image">
-            <p>₹30/kg</p>
-            <b>beetroot</b><br>
-            <button class="add-to-cart" onclick="addToCart('beetroot', 30, 'beetroot.jpeg')">Add to Cart</button>
-        </li>
-<li class="veg-item">
-            <img src="beans.jpeg" alt="beans" class="veg-image">
-            <p>₹15/kg</p>
-            <b>beans</b><br>
-            <button class="add-to-cart" onclick="addToCart('beans', 15, 'beans.jpeg')">Add to Cart</button>
-        </li>
-
-<li class="veg-item">
-            <img src="brinjal.jpeg" alt="brinjal" class="veg-image">
-            <p>₹35/kg</p>
-            <b>brinjal</b><br>
-            <button class="add-to-cart" onclick="addToCart('brinjal', 35, 'brinjal.jpeg')">Add to Cart</button>
-        </li>
-
-        <li class="veg-item">
-            <img src="potato.jpeg" alt="Potato" class="veg-image">
-            <p>₹15/kg</p>
-            <b>Potato</b><br>
-            <button class="add-to-cart" onclick="addToCart('Potato', 15, 'potato.jpeg')">Add to Cart</button>
-        </li>
-        <!-- Add more items as needed -->
+        <li class="veg-item"><img src="tomato.jpeg" alt="Tomato" class="veg-image"><p>₹20/kg</p><b>Tomato</b><br><button class="add-to-cart" onclick="addToCart('Tomato', 20, 'tomato.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="cucumber.jpeg" alt="Cucumber" class="veg-image"><p>₹15/kg</p><b>Cucumber</b><br><button class="add-to-cart" onclick="addToCart('Cucumber', 15, 'cucumber.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="carrot.jpeg" alt="Carrot" class="veg-image"><p>₹25/kg</p><b>Carrot</b><br><button class="add-to-cart" onclick="addToCart('Carrot', 25, 'carrot.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="beetroot.jpeg" alt="Beetroot" class="veg-image"><p>₹30/kg</p><b>Beetroot</b><br><button class="add-to-cart" onclick="addToCart('Beetroot', 30, 'beetroot.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="beans.jpeg" alt="Beans" class="veg-image"><p>₹15/kg</p><b>Beans</b><br><button class="add-to-cart" onclick="addToCart('Beans', 15, 'beans.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="brinjal.jpeg" alt="Brinjal" class="veg-image"><p>₹35/kg</p><b>Brinjal</b><br><button class="add-to-cart" onclick="addToCart('Brinjal', 35, 'brinjal.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="potato.jpeg" alt="Potato" class="veg-image"><p>₹15/kg</p><b>Potato</b><br><button class="add-to-cart" onclick="addToCart('Potato', 15, 'potato.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="onion.jpeg" alt="Onion" class="veg-image"><p>₹20/kg</p><b>Onion</b><br><button class="add-to-cart" onclick="addToCart('Onion', 20, 'onion.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="capsicum.jpeg" alt="Capsicum" class="veg-image"><p>₹40/kg</p><b>Capsicum</b><br><button class="add-to-cart" onclick="addToCart('Capsicum', 40, 'capsicum.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="pumpkin.jpeg" alt="Pumpkin" class="veg-image"><p>₹10/kg</p><b>Pumpkin</b><br><button class="add-to-cart" onclick="addToCart('Pumpkin', 10, 'pumpkin.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="bottle-gourd.jpeg" alt="Bottle Gourd" class="veg-image"><p>₹18/kg</p><b>Bottle Gourd</b><br><button class="add-to-cart" onclick="addToCart('Bottle Gourd', 18, 'bottle-gourd.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="ridge-gourd.jpeg" alt="Ridge Gourd" class="veg-image"><p>₹20/kg</p><b>Ridge Gourd</b><br><button class="add-to-cart" onclick="addToCart('Ridge Gourd', 20, 'ridge-gourd.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="ladyfinger.jpeg" alt="Lady Finger" class="veg-image"><p>₹22/kg</p><b>Lady Finger</b><br><button class="add-to-cart" onclick="addToCart('Lady Finger', 22, 'ladyfinger.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="sweet-potato.jpeg" alt="Sweet Potato" class="veg-image"><p>₹28/kg</p><b>Sweet Potato</b><br><button class="add-to-cart" onclick="addToCart('Sweet Potato', 28, 'sweet-potato.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="green-peas.jpeg" alt="Green Peas" class="veg-image"><p>₹35/kg</p><b>Green Peas</b><br><button class="add-to-cart" onclick="addToCart('Green Peas', 35, 'green-peas.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="turnip.jpeg" alt="Turnip" class="veg-image"><p>₹19/kg</p><b>Turnip</b><br><button class="add-to-cart" onclick="addToCart('Turnip', 19, 'turnip.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="radish.jpeg" alt="Radish" class="veg-image"><p>₹16/kg</p><b>Radish</b><br><button class="add-to-cart" onclick="addToCart('Radish', 16, 'radish.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="cauliflower.jpeg" alt="Cauliflower" class="veg-image"><p>₹32/kg</p><b>Cauliflower</b><br><button class="add-to-cart" onclick="addToCart('Cauliflower', 32, 'cauliflower.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="cabbage.jpeg" alt="Cabbage" class="veg-image"><p>₹18/kg</p><b>Cabbage</b><br><button class="add-to-cart" onclick="addToCart('Cabbage', 18, 'cabbage.jpeg')">Add to Cart</button></li>
+        <li class="veg-item"><img src="mushroom.jpeg" alt="Mushroom" class="veg-image"><p>₹50/kg</p><b>Mushroom</b><br><button class="add-to-cart" onclick="addToCart('Mushroom', 50, 'mushroom.jpeg')">Add to Cart</button></li>
     </ul>
     <script src="js/cart.js"></script>
 </body>
