@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>FRUITSMart</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: honeydew;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
         .veg-list {
             list-style: none;
             padding: 0;
@@ -13,12 +23,13 @@
             justify-content: center;
         }
         .veg-item {
-            margin: 20px;
-            padding: 20px;
+            margin: 15px;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 200px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
         .veg-image {
             width: 100%;
@@ -33,11 +44,12 @@
         }
         .add-to-cart {
             background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
+            padding: 8px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
         .add-to-cart:hover {
             background-color: #3e8e41;
@@ -45,47 +57,138 @@
     </style>
 </head>
 <body>
-    <h1>FRUITMart</h1>
+    <h1>FRUITSMart</h1>
     <ul class="veg-list">
-        <li class="veg-item">
+        <!-- Example format for each item:
+        <li class="veg-item" style="background-color: lightblue">
+            ...
+        </li> -->
+
+        <li class="veg-item" style="background-color: mistyrose">
             <img src="apples.jpeg" alt="Apples" class="veg-image">
             <p class="veg-price">₹20</p>
             <b>Apples</b><br>
             <button class="add-to-cart" onclick="addToCart('Apples', 20, 'apples.jpeg')">Add to Cart</button>
         </li>
-        <li class="veg-item">
+        <li class="veg-item" style="background-color: lavender">
             <img src="banana.jpeg" alt="Bananas" class="veg-image">
             <p class="veg-price">₹10</p>
             <b>Banana</b><br>
             <button class="add-to-cart" onclick="addToCart('Banana', 10, 'banana.jpeg')">Add to Cart</button>
         </li>
-        <li class="veg-item">
+        <li class="veg-item" style="background-color: lightyellow">
             <img src="mangoes.jpeg" alt="Mangoes" class="veg-image">
-            <p class="veg-price">₹10</p>
+            <p class="veg-price">₹50</p>
             <b>Mangoes</b><br>
-            <button class="add-to-cart" onclick="addToCart('Mangoes', 10, 'mangoes.jpeg')">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Mangoes', 50, 'mangoes.jpeg')">Add to Cart</button>
         </li>
-        <li class="veg-item">
+        <li class="veg-item" style="background-color: peachpuff">
             <img src="pineapple.jpeg" alt="Pineapples" class="veg-image">
             <p class="veg-price">₹30</p>
             <b>Pineapples</b><br>
             <button class="add-to-cart" onclick="addToCart('Pineapples', 30, 'pineapple.jpeg')">Add to Cart</button>
         </li>
-        <li class="veg-item">
+        <li class="veg-item" style="background-color: lightcyan">
             <img src="orange.jpeg" alt="Oranges" class="veg-image">
-            <p class="veg-price">₹30</p>
-            <b>Oranges</b><br>
-            <button class="add-to-cart" onclick="addToCart('Oranges', 30, 'orange.jpeg')">Add to Cart</button>
-        </li>
-        <li class="veg-item">
-            <img src="grape.jpeg" alt="Grapes" class="veg-image">
             <p class="veg-price">₹25</p>
+            <b>Oranges</b><br>
+            <button class="add-to-cart" onclick="addToCart('Oranges', 25, 'orange.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: honeydew">
+            <img src="grape.jpeg" alt="Grapes" class="veg-image">
+            <p class="veg-price">₹35</p>
             <b>Grapes</b><br>
-            <button class="add-to-cart" onclick="addToCart('Grapes', 25, 'grape.jpeg')">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Grapes', 35, 'grape.jpeg')">Add to Cart</button>
+        </li>
+
+        <!-- Additional 14 Fruits -->
+        <li class="veg-item" style="background-color: lemonchiffon">
+            <img src="watermelon.jpeg" alt="Watermelon" class="veg-image">
+            <p class="veg-price">₹40</p>
+            <b>Watermelon</b><br>
+            <button class="add-to-cart" onclick="addToCart('Watermelon', 40, 'watermelon.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: seashell">
+            <img src="papaya.jpeg" alt="Papaya" class="veg-image">
+            <p class="veg-price">₹35</p>
+            <b>Papaya</b><br>
+            <button class="add-to-cart" onclick="addToCart('Papaya', 35, 'papaya.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: lightpink">
+            <img src="kiwi.jpeg" alt="Kiwi" class="veg-image">
+            <p class="veg-price">₹60</p>
+            <b>Kiwi</b><br>
+            <button class="add-to-cart" onclick="addToCart('Kiwi', 60, 'kiwi.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: ivory">
+            <img src="pomegranate.jpeg" alt="Pomegranate" class="veg-image">
+            <p class="veg-price">₹55</p>
+            <b>Pomegranate</b><br>
+            <button class="add-to-cart" onclick="addToCart('Pomegranate', 55, 'pomegranate.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: aliceblue">
+            <img src="pear.jpeg" alt="Pear" class="veg-image">
+            <p class="veg-price">₹40</p>
+            <b>Pear</b><br>
+            <button class="add-to-cart" onclick="addToCart('Pear', 40, 'pear.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: linen">
+            <img src="plum.jpeg" alt="Plum" class="veg-image">
+            <p class="veg-price">₹45</p>
+            <b>Plum</b><br>
+            <button class="add-to-cart" onclick="addToCart('Plum', 45, 'plum.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: papayawhip">
+            <img src="dragonfruit.jpeg" alt="Dragon Fruit" class="veg-image">
+            <p class="veg-price">₹90</p>
+            <b>Dragon Fruit</b><br>
+            <button class="add-to-cart" onclick="addToCart('Dragon Fruit', 90, 'dragonfruit.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: azure">
+            <img src="chikoo.jpeg" alt="Chikoo" class="veg-image">
+            <p class="veg-price">₹30</p>
+            <b>Chikoo</b><br>
+            <button class="add-to-cart" onclick="addToCart('Chikoo', 30, 'chikoo.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: snow">
+            <img src="lychee.jpeg" alt="Lychee" class="veg-image">
+            <p class="veg-price">₹50</p>
+            <b>Lychee</b><br>
+            <button class="add-to-cart" onclick="addToCart('Lychee', 50, 'lychee.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: floralwhite">
+            <img src="custardapple.jpeg" alt="Custard Apple" class="veg-image">
+            <p class="veg-price">₹55</p>
+            <b>Custard Apple</b><br>
+            <button class="add-to-cart" onclick="addToCart('Custard Apple', 55, 'custardapple.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: lightsteelblue">
+            <img src="fig.jpeg" alt="Fig" class="veg-image">
+            <p class="veg-price">₹65</p>
+            <b>Fig</b><br>
+            <button class="add-to-cart" onclick="addToCart('Fig', 65, 'fig.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: beige">
+            <img src="blueberry.jpeg" alt="Blueberry" class="veg-image">
+            <p class="veg-price">₹80</p>
+            <b>Blueberry</b><br>
+            <button class="add-to-cart" onclick="addToCart('Blueberry', 80, 'blueberry.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: cornsilk">
+            <img src="blackberry.jpeg" alt="Blackberry" class="veg-image">
+            <p class="veg-price">₹85</p>
+            <b>Blackberry</b><br>
+            <button class="add-to-cart" onclick="addToCart('Blackberry', 85, 'blackberry.jpeg')">Add to Cart</button>
+        </li>
+        <li class="veg-item" style="background-color: oldlace">
+            <img src="jackfruit.jpeg" alt="Jackfruit" class="veg-image">
+            <p class="veg-price">₹70</p>
+            <b>Jackfruit</b><br>
+            <button class="add-to-cart" onclick="addToCart('Jackfruit', 70, 'jackfruit.jpeg')">Add to Cart</button>
         </li>
     </ul>
 
-    <!-- Include cart logic -->
+    <!-- Cart logic script -->
     <script src="js/cart.js"></script>
 </body>
 </html>
