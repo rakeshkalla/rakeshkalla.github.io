@@ -8,12 +8,16 @@
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
+			/* More effective background color: Light Sky Blue */
+			background-color: #f0f8ff; /* AliceBlue */
 		}
 
 		.header {
-			background-color: #f0f0f0;
+			/* More effective background color: Soft Peach */
+			background-color: #ffe4e1; /* MistyRose */
 			padding: 20px;
 			text-align: center;
+			color: #333;
 		}
 
 		.tools-list {
@@ -29,34 +33,43 @@
 			border-radius: 10px;
 			padding: 10px;
 			text-align: center;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			transition: transform 0.2s;
+		}
+
+		.tools-item:hover {
+			transform: translateY(-5px);
 		}
 
 		.tools-item img {
 			width: 100%;
 			height: 150px;
 			object-fit: cover;
-			border-radius: 20px;
+			border-radius: 10px; /* Slightly adjusted for consistent look */
 		}
 
 		.tools-item h3 {
 			margin-top: 10px;
+			color: #333;
 		}
 
 		.tools-item p {
 			margin-bottom: 10px;
+			color: #555;
 		}
 
 		.tools-item button {
-			background-color: #171715;
+			background-color: #007bff; /* A nice blue for buttons */
 			color: #fff;
 			padding: 10px 20px;
 			border: none;
 			border-radius: 10px;
 			cursor: pointer;
+			transition: background-color 0.3s ease;
 		}
 
 		.tools-item button:hover {
-			background-color: #9b39a8;
+			background-color: #0056b3; /* Darker blue on hover */
 		}
 	</style>
 </head>
@@ -67,79 +80,254 @@
 
 	<div class="tools-list">
 		<div class="tools-item">
-			<img src="drill.jpeg" alt="Drill">
+			<img src="https://via.placeholder.com/150/FF5733/FFFFFF?text=Drill" alt="Drill">
 			<p><strong>Price: ₹650</strong></p>
 			<h3>Drill</h3>
 			<p>Powerful and efficient drill for various tasks.</p>
-			<button onclick="addToCart('Drill', 650, 'drill.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Drill', 650, 'https://via.placeholder.com/150/FF5733/FFFFFF?text=Drill')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="wrench.jpeg" alt="Wrench">
+			<img src="https://via.placeholder.com/150/33FF57/FFFFFF?text=Wrench" alt="Wrench">
 			<p><strong>Price: ₹500</strong></p>
 			<h3>Wrench</h3>
 			<p>High-quality wrench for tightening and loosening bolts.</p>
-			<button onclick="addToCart('Wrench', 500, 'wrench.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Wrench', 500, 'https://via.placeholder.com/150/33FF57/FFFFFF?text=Wrench')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="saw.jpeg" alt="Saw">
+			<img src="https://via.placeholder.com/150/3357FF/FFFFFF?text=Saw" alt="Saw">
 			<p><strong>Price: ₹340</strong></p>
 			<h3>Saw</h3>
 			<p>High-precision saw for cutting through various materials.</p>
-			<button onclick="addToCart('Saw', 340, 'saw.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Saw', 340, 'https://via.placeholder.com/150/3357FF/FFFFFF?text=Saw')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="screws.jpeg" alt="Screws">
+			<img src="https://via.placeholder.com/150/FF33A1/FFFFFF?text=Screws" alt="Screws">
 			<p><strong>Price: ₹200</strong></p>
 			<h3>Screws</h3>
 			<p>Used to hold things together or lift objects.</p>
-			<button onclick="addToCart('Screws', 200, 'screws.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Screws', 200, 'https://via.placeholder.com/150/FF33A1/FFFFFF?text=Screws')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="screwdrivers.jpeg" alt="Screw Driver">
+			<img src="https://via.placeholder.com/150/A1FF33/FFFFFF?text=Screwdriver" alt="Screw Driver">
 			<p><strong>Price: ₹120</strong></p>
-			<h3>Screw Driver</h3>
-			<p>Useful to tighten screws.</p>
-			<button onclick="addToCart('Screw Driver', 120, 'screwdrivers.jpeg')">Add to Cart</button>
+			<h3>Screw Driver Set</h3>
+			<p>Useful to tighten and loosen screws of various sizes.</p>
+			<button onclick="addToCart('Screw Driver Set', 120, 'https://via.placeholder.com/150/A1FF33/FFFFFF?text=Screwdriver')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="pliers.jpeg" alt="Pliers">
+			<img src="https://via.placeholder.com/150/33FFF5/FFFFFF?text=Pliers" alt="Pliers">
 			<p><strong>Price: ₹230</strong></p>
-			<h3>Pliers</h3>
-			<p>Used for gripping, bending, and cutting.</p>
-			<button onclick="addToCart('Pliers', 230, 'pliers.jpeg')">Add to Cart</button>
+			<h3>Pliers Set</h3>
+			<p>Used for gripping, bending, and cutting wires.</p>
+			<button onclick="addToCart('Pliers Set', 230, 'https://via.placeholder.com/150/33FFF5/FFFFFF?text=Pliers')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="testerr.jpeg" alt="Tester">
+			<img src="https://via.placeholder.com/150/F5FF33/FFFFFF?text=Tester" alt="Tester">
 			<p><strong>Price: ₹70</strong></p>
-			<h3>Tester</h3>
+			<h3>Voltage Tester</h3>
 			<p>Detect voltage and ensure safe repairs.</p>
-			<button onclick="addToCart('Tester', 70, 'testerr.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Voltage Tester', 70, 'https://via.placeholder.com/150/F5FF33/FFFFFF?text=Tester')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="tape.jpeg" alt="Tape Measure">
+			<img src="https://via.placeholder.com/150/FF8833/FFFFFF?text=TapeMeasure" alt="Tape Measure">
 			<p><strong>Price: ₹170</strong></p>
 			<h3>Tape Measure</h3>
 			<p>Used to measure lengths accurately.</p>
-			<button onclick="addToCart('Tape Measure', 170, 'tape.jpeg')">Add to Cart</button>
+			<button onclick="addToCart('Tape Measure', 170, 'https://via.placeholder.com/150/FF8833/FFFFFF?text=TapeMeasure')">Add to Cart</button>
 		</div>
 
 		<div class="tools-item">
-			<img src="fishtape.jpeg" alt="Fish Tape">
+			<img src="https://via.placeholder.com/150/8833FF/FFFFFF?text=FishTape" alt="Fish Tape">
 			<p><strong>Price: ₹270</strong></p>
 			<h3>Fish Tape</h3>
-			<p>Pull wires through conduits.</p>
-			<button onclick="addToCart('Fish Tape', 270, 'fishtape.jpeg')">Add to Cart</button>
+			<p>Pull wires through conduits and tight spaces.</p>
+			<button onclick="addToCart('Fish Tape', 270, 'https://via.placeholder.com/150/8833FF/FFFFFF?text=FishTape')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/33CCFF/FFFFFF?text=WireStripper" alt="Wire Stripper">
+			<p><strong>Price: ₹320</strong></p>
+			<h3>Wire Stripper</h3>
+			<p>Strips insulation from electrical wires quickly and cleanly.</p>
+			<button onclick="addToCart('Wire Stripper', 320, 'https://via.placeholder.com/150/33CCFF/FFFFFF?text=WireStripper')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/CCFF33/FFFFFF?text=Multimeter" alt="Multimeter">
+			<p><strong>Price: ₹950</strong></p>
+			<h3>Digital Multimeter</h3>
+			<p>Measures voltage, current, and resistance for diagnostics.</p>
+			<button onclick="addToCart('Digital Multimeter', 950, 'https://via.placeholder.com/150/CCFF33/FFFFFF?text=Multimeter')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FF33CC/FFFFFF?text=SolderingIron" alt="Soldering Iron">
+			<p><strong>Price: ₹480</strong></p>
+			<h3>Soldering Iron</h3>
+			<p>Used for joining electrical components with solder.</p>
+			<button onclick="addToCart('Soldering Iron', 480, 'https://via.placeholder.com/150/FF33CC/FFFFFF?text=SolderingIron')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/33FF88/FFFFFF?text=HeatGun" alt="Heat Gun">
+			<p><strong>Price: ₹720</strong></p>
+			<h3>Heat Gun</h3>
+			<p>Applies heat for shrink tubing and other electrical tasks.</p>
+			<button onclick="addToCart('Heat Gun', 720, 'https://via.placeholder.com/150/33FF88/FFFFFF?text=HeatGun')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/88FF33/FFFFFF?text=CircuitBreakerFinder" alt="Circuit Breaker Finder">
+			<p><strong>Price: ₹1100</strong></p>
+			<h3>Circuit Breaker Finder</h3>
+			<p>Easily identifies circuit breakers for specific outlets.</p>
+			<button onclick="addToCart('Circuit Breaker Finder', 1100, 'https://via.placeholder.com/150/88FF33/FFFFFF?text=CircuitBreakerFinder')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FFDD33/FFFFFF?text=ConduitBender" alt="Conduit Bender">
+			<p><strong>Price: ₹1800</strong></p>
+			<h3>Conduit Bender</h3>
+			<p>Bends electrical conduit to precise angles.</p>
+			<button onclick="addToCart('Conduit Bender', 1800, 'https://via.placeholder.com/150/FFDD33/FFFFFF?text=ConduitBender')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/33FFDD/FFFFFF?text=CrimpingTool" alt="Crimping Tool">
+			<p><strong>Price: ₹410</strong></p>
+			<h3>Crimping Tool</h3>
+			<p>Secures connectors to wires for strong electrical connections.</p>
+			<button onclick="addToCart('Crimping Tool', 410, 'https://via.placeholder.com/150/33FFDD/FFFFFF?text=CrimpingTool')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/DD33FF/FFFFFF?text=InsulationTester" alt="Insulation Tester">
+			<p><strong>Price: ₹2500</strong></p>
+			<h3>Insulation Tester</h3>
+			<p>Checks the integrity of electrical insulation.</p>
+			<button onclick="addToCart('Insulation Tester', 2500, 'https://via.placeholder.com/150/DD33FF/FFFFFF?text=InsulationTester')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/33FFFF/FFFFFF?text=WireNuts" alt="Wire Nuts">
+			<p><strong>Price: ₹90</strong></p>
+			<h3>Wire Nuts Assortment</h3>
+			<p>Connects and insulates multiple wires together.</p>
+			<button onclick="addToCart('Wire Nuts Assortment', 90, 'https://via.placeholder.com/150/33FFFF/FFFFFF?text=WireNuts')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FF3388/FFFFFF?text=OutletTester" alt="Outlet Tester">
+			<p><strong>Price: ₹280</strong></p>
+			<h3>Outlet Tester</h3>
+			<p>Quickly checks for correct wiring in electrical outlets.</p>
+			<button onclick="addToCart('Outlet Tester', 280, 'https://via.placeholder.com/150/FF3388/FFFFFF?text=OutletTester')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/88FF33/FFFFFF?text=Flashlight" alt="Work Light">
+			<p><strong>Price: ₹350</strong></p>
+			<h3>LED Work Light</h3>
+			<p>Provides bright illumination for working in dark spaces.</p>
+			<button onclick="addToCart('LED Work Light', 350, 'https://via.placeholder.com/150/88FF33/FFFFFF?text=Flashlight')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/3388FF/FFFFFF?text=CableTies" alt="Cable Ties">
+			<p><strong>Price: ₹50</strong></p>
+			<h3>Cable Ties</h3>
+			<p>Organizes and bundles electrical cables neatly.</p>
+			<button onclick="addToCart('Cable Ties', 50, 'https://via.placeholder.com/150/3388FF/FFFFFF?text=CableTies')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FFDD88/FFFFFF?text=Gloves" alt="Insulated Gloves">
+			<p><strong>Price: ₹400</strong></p>
+			<h3>Insulated Gloves</h3>
+			<p>Protects hands from electrical shock.</p>
+			<button onclick="addToCart('Insulated Gloves', 400, 'https://via.placeholder.com/150/FFDD88/FFFFFF?text=Gloves')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/88FFDD/FFFFFF?text=SafetyGlasses" alt="Safety Glasses">
+			<p><strong>Price: ₹150</strong></p>
+			<h3>Safety Glasses</h3>
+			<p>Protects eyes from debris and sparks.</p>
+			<button onclick="addToCart('Safety Glasses', 150, 'https://via.placeholder.com/150/88FFDD/FFFFFF?text=SafetyGlasses')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/DD88FF/FFFFFF?text=WirePuller" alt="Wire Puller">
+			<p><strong>Price: ₹600</strong></p>
+			<h3>Wire Puller</h3>
+			<p>Assists in pulling multiple wires through conduit.</p>
+			<button onclick="addToCart('Wire Puller', 600, 'https://via.placeholder.com/150/DD88FF/FFFFFF?text=WirePuller')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FF88DD/FFFFFF?text=TerminalKit" alt="Terminal Kit">
+			<p><strong>Price: ₹550</strong></p>
+			<h3>Electrical Terminal Kit</h3>
+			<p>Assorted terminals for various wiring connections.</p>
+			<button onclick="addToCart('Electrical Terminal Kit', 550, 'https://via.placeholder.com/150/FF88DD/FFFFFF?text=TerminalKit')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/88DDFF/FFFFFF?text=DrillBitSet" alt="Drill Bit Set">
+			<p><strong>Price: ₹780</strong></p>
+			<h3>Drill Bit Set</h3>
+			<p>Various drill bits for different materials and sizes.</p>
+			<button onclick="addToCart('Drill Bit Set', 780, 'https://via.placeholder.com/150/88DDFF/FFFFFF?text=DrillBitSet')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/DDFF88/FFFFFF?text=VoltTesterPen" alt="Non-Contact Voltage Tester Pen">
+			<p><strong>Price: ₹450</strong></p>
+			<h3>Non-Contact Voltage Tester Pen</h3>
+			<p>Detects AC voltage without direct contact.</p>
+			<button onclick="addToCart('Non-Contact Voltage Tester Pen', 450, 'https://via.placeholder.com/150/DDFF88/FFFFFF?text=VoltTesterPen')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/FFDDAA/FFFFFF?text=UtilityKnife" alt="Utility Knife">
+			<p><strong>Price: ₹190</strong></p>
+			<h3>Utility Knife</h3>
+			<p>For cutting various materials, including insulation.</p>
+			<button onclick="addToCart('Utility Knife', 190, 'https://via.placeholder.com/150/FFDDAA/FFFFFF?text=UtilityKnife')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/AADDAA/FFFFFF?text=ToolBag" alt="Tool Bag">
+			<p><strong>Price: ₹1200</strong></p>
+			<h3>Electrician's Tool Bag</h3>
+			<p>Organizes and carries all your essential tools.</p>
+			<button onclick="addToCart('Electrician\'s Tool Bag', 1200, 'https://via.placeholder.com/150/AADDAA/FFFFFF?text=ToolBag')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/DDAADD/FFFFFF?text=CableCutter" alt="Cable Cutter">
+			<p><strong>Price: ₹850</strong></p>
+			<h3>Cable Cutter</h3>
+			<p>Specialized tool for clean cuts on electrical cables.</p>
+			<button onclick="addToCart('Cable Cutter', 850, 'https://via.placeholder.com/150/DDAADD/FFFFFF?text=CableCutter')">Add to Cart</button>
+		</div>
+
+		<div class="tools-item">
+			<img src="https://via.placeholder.com/150/AAFFDD/FFFFFF?text=GroundingRod" alt="Grounding Rod">
+			<p><strong>Price: ₹900</strong></p>
+			<h3>Grounding Rod</h3>
+			<p>Used to provide an electrical ground for safety.</p>
+			<button onclick="addToCart('Grounding Rod', 900, 'https://via.placeholder.com/150/AAFFDD/FFFFFF?text=GroundingRod')">Add to Cart</button>
 		</div>
 	</div>
 
-	<!-- Link to cart logic -->
 	<script src="js/cart.js"></script>
 </body>
 </html>
