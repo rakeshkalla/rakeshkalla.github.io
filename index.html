@@ -1,102 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Central</title>
-    <style>
-        /* Basic CSS for layout */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #f8f8f8;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .nav-items {
-            display: flex;
-            justify-content: center;
-            background-color: #eee;
-            padding: 10px;
-        }
-        .nav-items a {
-            padding: 8px 16px;
-            text-decoration: none;
-            color: #333;
-        }
-        .intro {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .categories {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .category {
-            text-align: center;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VRMart - Grocery Central</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f093fb, #f5576c, #4facfe, #43e97b);
+      background-size: 500% 500%;
+      animation: gradientFlow 12s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header {
+      padding: 25px 30px;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 10px 20px;
+      margin: 6px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .nav-items a:hover {
+      background-color: #4facfe;
+      color: white;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 60px 20px;
+      color: #fff;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .intro h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .category {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .category img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .category:hover img {
+      transform: scale(1.05);
+    }
+
+    .category h3 {
+      margin: 15px 0 0;
+      color: #222;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .intro h2 {
+        font-size: 28px;
+      }
+
+      .categories {
+        padding: 20px;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1> EazyShop</h1>
-    </header>
-    <nav class="nav-items">
-                <a href="sign in.html">Sign In</a>
-        <a href="signup.html">Sign up</a>
-<a href="cart.html">cart</a>
-<a href="checkout.html">checkout</a>
 
-    </nav>
-    <main>
-        <section class="intro">
-            <h2>Welcome to  EazyShop!</h2>
-            <p>Your one-stop shop for all your needs.</p>
-        </section>
-        <section class="categories">
-            <div class="category">
-                <a href="fruits.html">
-                    <h3>Fruits</h3>
-                    <img src="fruitimage.jpeg" alt="Fruits" width="200">
-                </a>
-            </div>
-            <div class="category">
-                <a href="vegetables.html">
-                    <h3>Vegetables</h3>
-                    <img src="vegetables.jpeg" alt="Vegetables" width="200">
-                </a>
-            </div>
-            <div class="category">
-                <a href="clothes.html">
-                    <h3>Clothes</h3>
-                    <img src="clothes.jpeg" alt="Clothes" width="300">
-                </a>
-            </div>
-            <div class="category">
-                <a href="electronics.html">
-                    <h3>Electronics</h3>
-                    <img src="electrictools.jpeg" alt="Electronics" width="400">
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2024 Grocery Central</p>
-    </footer>
+  <header class="header">VR MART</header>
+
+  <nav class="nav-items">
+    <a href="sign in.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+
+  <section class="intro">
+    <h2>Welcome to VR MART!</h2>
+    <p>Your one-stop shop for all daily essentials with top-quality items and lightning-fast delivery across your city.</p>
+  </section>
+
+  <section class="categories">
+    <div class="category">
+      <a href="fruits.html">
+        <img src="fruitimage.jpeg" alt="Fruits">
+        <h3>Fruits</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="vegetables.html">
+        <img src="vegetables.jpeg" alt="Vegetables">
+        <h3>Vegetables</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="clothes.html">
+        <img src="clothes.jpeg" alt="Clothes">
+        <h3>Clothes</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="electronics.html">
+        <img src="electrictools.jpeg" alt="Electronics">
+        <h3>Electronics</h3>
+      </a>
+    </div>
+  </section>
+
 </body>
 </html>
