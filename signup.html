@@ -3,62 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    form {
-      width: 50%;
-      margin: 40px auto;
-      background-color: #f9f9f9;
-      padding: 20px;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    form {
+      background-color: SKYBLUE;
+      padding: 35px 30px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 28px;
+    }
+
     label {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
     }
-    input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px 14px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: border 0.3s, box-shadow 0.3s;
     }
+
+    input:focus, textarea:focus {
+      border: 1px solid #ff758c;
+      box-shadow: 0 0 8px #ff7eb3aa;
+      outline: none;
+    }
+
     textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      height: 100px;
       resize: vertical;
+      min-height: 80px;
     }
+
     button[type="submit"] {
-      background-color: #4CAF50;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
       color: #fff;
-      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
+
     button[type="submit"]:hover {
-      background-color: #3e8e41;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(91, 134, 229, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 25px 20px;
+        margin: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <form id="signup-form">
-    <label for="name">Name:</label>
+    <h2>Create Your Account</h2>
+
+    <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
+    <label for="email">Email Address</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="password">Password:</label>
+    <label for="password">Password</label>
     <input type="password" id="password" name="password" required>
 
-    <label for="mobile">Mobile Number:</label>
+    <label for="mobile">Mobile Number</label>
     <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
 
-    <label for="address">Address:</label>
+    <label for="address">Address</label>
     <textarea id="address" name="address" required></textarea>
 
     <button type="submit">Register</button>
@@ -66,10 +120,9 @@
 
   <script>
     document.getElementById("signup-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent actual form submission
-
-      alert("Registration successful!");
-      window.location.href = "homepage.html"; // Redirect to homepage
+      event.preventDefault();
+      alert("🎉 Registration successful!");
+      window.location.href = "homepage.html";
     });
   </script>
 </body>
